@@ -70,7 +70,7 @@ class myAugmentation(object):
 			self.doAugmentate(img, savedir, str(i))
 
 
-	def doAugmentate(self, img, save_to_dir, save_prefix, batch_size=1, save_format='tif', imgnum=30):
+	def doAugmentate(self, img, save_to_dir, save_prefix, batch_size=1, save_format='tif', imgnum=5593):
 
 		"""
 		augmentate one image
@@ -135,7 +135,7 @@ class myAugmentation(object):
 
 class dataProcess(object):
 
-	def __init__(self, out_rows, out_cols, data_path = "../deform/train", label_path = "../deform/label", test_path = "../test", npy_path = "../npydata", img_type = "tif"):
+	def __init__(self, out_rows, out_cols, data_path = "/root/UNet2/data/train/image", label_path = "/root/UNet2/data/train/label", test_path = "/root/UNet2/data/test", npy_path = "/root/UNet2/data/npydata", img_type = "tif"):
 
 		"""
 		
