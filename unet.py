@@ -10,7 +10,7 @@ from data import *
 
 class myUnet(object):
 
-	def __init__(self, img_rows = 512, img_cols = 512):
+	def __init__(self, img_rows = 256, img_cols = 256):
 
 		self.img_rows = img_rows
 		self.img_cols = img_cols
@@ -161,16 +161,16 @@ class myUnet(object):
 
 		print('predict test data')
 		imgs_mask_test = model.predict(imgs_test, batch_size=1, verbose=1)
-		np.save('../results/imgs_mask_test.npy', imgs_mask_test)
+		np.save('/root/UNet2/results/imgs_mask_test.npy', imgs_mask_test)
 
 	def save_img(self):
 
 		print("array to image")
-		imgs = np.load('imgs_mask_test.npy')
+		imgs = np.load('/root/UNet2/results/imgs_mask_test.npy')
 		for i in range(imgs.shape[0]):
 			img = imgs[i]
 			img = array_to_img(img)
-			img.save("../results/%d.jpg"%(i))
+			img.save("/root/UNet2/results/%d.jpg"%(i))
 
 
 
