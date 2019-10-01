@@ -231,7 +231,7 @@ if __name__ == "__main__":
 	#aug.Augmentation()
 	#aug.splitMerge()
 	#aug.splitTransform()
-	mydata = dataProcess(512,512)
+	mydata = dataProcess(256,256)
 	mydata.create_train_data()
 	mydata.create_test_data()
 	#imgs_train,imgs_mask_train = mydata.load_train_data()
