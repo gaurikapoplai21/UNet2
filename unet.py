@@ -142,7 +142,7 @@ class myUnet(object):
 
 		model = Model(input = inputs, output = conv10)
 
-		model.compile(optimizer = Adam(lr = 3e-5), loss = 'binary_crossentropy', metrics = ['accuracy'])
+		model.compile(optimizer = Adam(lr = 3e-5), loss = 'binary_crossentropy', metrics = ['dice_coef'])
 
 		return model
 
